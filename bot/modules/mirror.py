@@ -339,7 +339,7 @@ def _mirror(bot, message, isZip=False, extract=False, isQbit=False, isLeech=Fals
             uname = message.from_user.mention_html(message.from_user.first_name)
             user = bot.get_chat_member(FSUB_CHANNEL_ID, message.from_user.id)
             if user.status not in ['member', 'creator', 'administrator']:
-                buttons.buildbutton( f"{Pendiam Frustasi}", f"https://t.me/{CHANNEL_USERNAME}")
+                buttons.buildbutton( f"{TITLE_NAME}", f"https://t.me/{CHANNEL_USERNAME}")
                 reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
                 return sendMarkup(f"<b>Dear {uname}️,\n\nI found that you haven't joined our Updates Channel yet.\n\nJoin and Use Bots Without Restrictions.</b>", bot, message, reply_markup)
         except Exception as e:
